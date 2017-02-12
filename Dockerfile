@@ -11,7 +11,7 @@ RUN apk add --update \
   && rm -rf /var/cache/apk/*
 
 RUN addgroup -g ${GID} hass \
-  && adduser -u ${UID} -h /opt/hass -H -G hass -s /sbin/nologin -D hass
+  && adduser -u ${UID} -h /opt/hass -H -G hass -s /bin/bash -D hass
 
 VOLUME ["/config"]
 
