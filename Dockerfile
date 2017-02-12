@@ -15,7 +15,7 @@ RUN addgroup -g ${GID} hass \
 
 VOLUME ["/config"]
 
-RUN pip3 install home-assistant
+RUN pip3 install homeassistant
 
 EXPOSE 8123
 
