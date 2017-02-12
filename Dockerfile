@@ -1,4 +1,4 @@
-FROM armhero/alpine:3.4
+FROM armhero/alpine:3.5
 MAINTAINER Simon Erhardt <hello@rootlogin.ch>
 
 ARG UID=1505
