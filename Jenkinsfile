@@ -31,4 +31,8 @@ node('armv7') {
       '''
     }
   }
+
+  stage('Deploy') {
+    build 'docker.deployment.epsilon'
+  }
 }
