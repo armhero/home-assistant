@@ -8,6 +8,7 @@ COPY root /
 
 RUN apk add --update \
   bash \
+  ca-certificates \
   nmap \
   python3 \
   tini \
