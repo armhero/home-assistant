@@ -27,7 +27,7 @@ node('armv7') {
           sudo docker push armhero/home-assistant:${BRANCH_NAME}
         fi
 
-        curl -X POST https://hooks.microbadger.com/images/armhero/home-assistant/tCK8AyUIlPJk-fpjfmeI8EXbmAo=
+        curl -X POST https://hooks.microbadger.com/images/armhero/home-assistant/MYOTgmjXvS3cD7tIOzw8O2GdGRw=
       '''
     }
   }

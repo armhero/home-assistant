@@ -15,10 +15,9 @@ RUN addgroup -g ${GID} hass \
 
 VOLUME ["/config"]
 
-RUN pip3 install homeassistant \
-  && chown -R hass:hass /config
+RUN pip3 install homeassistant
 
 EXPOSE 8123
 
 ENTRYPOINT ["/sbin/tini", "--"]
-CMD ["su", "-c", "hass --config /config", "hass"]
+CMD ["su", "-c", "chown -R hass:hass /config && hass --config /config", "hass"]
