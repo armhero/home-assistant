@@ -4,11 +4,7 @@ MAINTAINER Simon Erhardt <hello@rootlogin.ch>
 ARG UID=1505
 ARG GID=1505
 
-VOLUME ["/config"]
-
 COPY root /
-
-EXPOSE 8123
 
 RUN apk add --update \
   bash \
@@ -19,6 +15,10 @@ RUN apk add --update \
   && adduser -u ${UID} -h /opt/hass -H -G hass -s /bin/bash -D hass \
   && pip3 install homeassistant \
   && chmod +x /usr/local/bin/run-container.sh
+
+VOLUME ["/config"]
+
+EXPOSE 8123
 
 ENTRYPOINT ["/sbin/tini", "--"]
 CMD ["/usr/local/bin/run-container.sh"]
