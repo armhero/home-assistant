@@ -8,6 +8,7 @@ COPY root /
 
 RUN apk add --update \
   bash \
+  nmap \
   python3 \
   tini \
   && rm -rf /var/cache/apk/* \
