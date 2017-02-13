@@ -3,6 +3,8 @@
 
 A [Home-Assistant](http://home-assistant.io) docker image for **ARMv7** (like Raspberry Pi 2 and above).
 
+**WARNING**: This is a docker image for the ARM platform, therefor it does only work on devices with ARM CPU.
+
 ## Volumes
  * **/config**: All configuration files of home-assistant.
 
