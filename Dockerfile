@@ -14,6 +14,7 @@ RUN apk add --update \
   mariadb-dev \
   nmap \
   python3 \
+  python3-dev\
   tini \
   && addgroup -g ${GID} hass \
   && adduser -u ${UID} -h /opt/hass -H -G hass -s /bin/bash -D hass \
@@ -22,6 +23,7 @@ RUN apk add --update \
   && apk del \
   alpine-sdk \
   mariadb-dev \
+  python3-dev \
   && chmod +x /usr/local/bin/run-container.sh \
   && rm -rf /var/cache/apk/*
 
