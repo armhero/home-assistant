@@ -13,3 +13,6 @@ A [Home-Assistant](http://home-assistant.io) docker image for **ARMv7** (like Ra
 docker run -p 3128:3128 -v HAConfig:/config -d armhero/home-assistant
 ```
 Wait a few seconds and you can access home-assistant on port 3128 on your machine.
+
+### Using a database
+This image includes the mariadb client. You can start a [armhero/mariadb](https://github.com/armhero/mariadb) container and link them together.
