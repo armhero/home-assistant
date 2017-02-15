@@ -7,6 +7,7 @@ ARG GID=1505
 COPY root /
 
 RUN apk add --update \
+  alpine-sdk \
   bash \
   ca-certificates \
   mariadb-client \
@@ -18,7 +19,9 @@ RUN apk add --update \
   && adduser -u ${UID} -h /opt/hass -H -G hass -s /bin/bash -D hass \
   && pip3 install homeassistant \
   && pip3 install mysqlclient \
-  && apk del mariadb-dev \
+  && apk del \
+  alpine-sdk \
+  mariadb-dev \
   && chmod +x /usr/local/bin/run-container.sh \
   && rm -rf /var/cache/apk/*
 
