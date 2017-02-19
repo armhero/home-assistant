@@ -20,6 +20,7 @@ RUN apk add --update \
   && adduser -u ${UID} -h /opt/hass -H -G hass -s /bin/bash -D hass \
   && pip3 install homeassistant \
   && pip3 install mysqlclient \
+  && pip3 install netdisco \
   && apk del \
   alpine-sdk \
   mariadb-dev \
