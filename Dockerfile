@@ -10,6 +10,7 @@ RUN apk add --update \
   alpine-sdk \
   bash \
   ca-certificates \
+  linux-headers \
   mariadb-client \
   mariadb-dev \
   nmap \
@@ -23,6 +24,7 @@ RUN apk add --update \
   && pip3 install netdisco \
   && apk del \
   alpine-sdk \
+  linux-headers \
   mariadb-dev \
   python3-dev \
   && chmod +x /usr/local/bin/run-container.sh \
