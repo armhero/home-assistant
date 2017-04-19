@@ -22,6 +22,7 @@ RUN apk add --update \
   && pip3 install homeassistant \
   && pip3 install mysqlclient \
   && pip3 install netdisco \
+  && pip3 install zeroconf \
   && apk del \
   alpine-sdk \
   linux-headers \
