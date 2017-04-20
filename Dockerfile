@@ -23,6 +23,7 @@ RUN apk add --update \
   && pip3 install mysqlclient \
   && pip3 install netdisco \
   && pip3 install zeroconf \
+  && pip3 install netifaces \
   && apk del \
   alpine-sdk \
   linux-headers \
