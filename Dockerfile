@@ -19,11 +19,7 @@ RUN apk add --update \
   tini \
   && addgroup -g ${GID} hass \
   && adduser -u ${UID} -h /opt/hass -H -G hass -s /bin/bash -D hass \
-  && pip3 install homeassistant \
-  && pip3 install mysqlclient \
-  && pip3 install netdisco \
-  && pip3 install zeroconf \
-  && pip3 install netifaces \
+  && pip3 install -r /opt/home-assistant/requirements.txt \
   && apk del \
   alpine-sdk \
   linux-headers \
